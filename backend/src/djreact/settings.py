@@ -37,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'rest_framework',
     'dishes'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -126,3 +128,5 @@ STATIC_URL = '/static/'
 #         'rest_framework.permissions.DjangomodelPermissionsOrAnonReadOnly'
 #     ]
 # }
+
+CORS_ORIGIN_ALLOW_ALL = True  # what

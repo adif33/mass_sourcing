@@ -8,4 +8,4 @@ from dishes.models import Dish
 class DishSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dish
-        fields = ('title', 'content')
+        fields = ('id', 'title', 'content')
